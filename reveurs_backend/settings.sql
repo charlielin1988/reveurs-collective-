@@ -1,0 +1,3 @@
+CREATE DATABASE reveurs;
+CREATE USER reveursuser WITH PASSWORD 'reveurs';
+GRANT ALL PRIVILEGES ON DATABASE reveurs TO reveursuser;
