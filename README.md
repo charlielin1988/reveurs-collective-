@@ -27,9 +27,8 @@ An immersive site for fans of Erin Morgenstern's The Night Circus, wherein a sec
 
 - Create Account
 - Login
-  -View, Add, Update, Or Delete Locations
-  -View, Add, Update, Review, or Delete Exhibitions
-- A Trello Of My Plan For This Project Can Be Viewed [Here](https://trello.com/b/SSbNIv42/reveurs-website-p4)
+- View, Add, Update, Or Delete Locations
+  - A Trello Of My Plan For This Project Can Be Viewed [Here](https://trello.com/b/SSbNIv42/reveurs-website-p4)
 - Design Diagrams For Front End and Back End Layouts Can Be Viewed [Here](https://whimsical.com/project-4-GTApRYUJFN8EHZGjpiazGr)
 
 ---
@@ -44,7 +43,7 @@ An immersive site for fans of Erin Morgenstern's The Night Circus, wherein a sec
 
 ### Technologies Used
 
-- Postgress
-- Express
-- React
-- Node.js
+- Sequelize
+- Django
+- Python
+- Vue
