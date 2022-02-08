@@ -28,4 +28,9 @@ class ReviewList(generics.ListCreateAPIView):
     serializer_class = ReviewSerializer
 
 
+class ReviewDetail(generics.ListCreateAPIView):
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
+
+
 # Create your views here.
