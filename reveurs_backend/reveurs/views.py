@@ -11,4 +11,9 @@ def exhibition_list(request):
     exhibitions = Exhibition.objects.all()
     return render(request, 'reveurs/exhibition_list.html', {'exhibitions': exhibitions})
 
+
+def review_list(request):
+    reviews = Review.objects.all()
+    return render(request, 'reveurs/review_list.html', {'reviews': reviews})
+
 # Create your views here.
