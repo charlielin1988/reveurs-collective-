@@ -28,13 +28,14 @@ An immersive site for fans of Erin Morgenstern's The Night Circus, wherein a sec
 - Create Account
 - Login
 - View, Add, Update, Or Delete Locations
-  - A Trello Of My Plan For This Project Can Be Viewed [Here](https://trello.com/b/SSbNIv42/reveurs-website-p4)
+- A Trello Of My Plan For This Project Can Be Viewed [Here](https://trello.com/b/SSbNIv42/reveurs-website-p4)
 - Design Diagrams For Front End and Back End Layouts Can Be Viewed [Here](https://whimsical.com/project-4-GTApRYUJFN8EHZGjpiazGr)
 
 ---
 
 ### Future Updates
 
+-
 - Interactive Map Feature
 - Option To Archive Exhibitions: Instead of deleting past exhibition information, store on page entitled "Past Exhibitions"
 - Collabs With Artists To Feature Fan Art On Site
