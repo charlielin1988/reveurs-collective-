@@ -10,9 +10,8 @@ class User(models.Model):
     email = models.CharField(max_length=100)
     passwordDigest = models.CharField(max_length=100)
 
-
-def __str__(self):
-    return self.name
+    def __str__(self):
+        return self.name
 
 
 class Location(models.Model):
@@ -22,9 +21,8 @@ class Location(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
 
-
-def __str__(self):
-    return self.city
+    def __str__(self):
+        return self.city
 
 
 class Exhibition(models.Model):
@@ -33,6 +31,16 @@ class Exhibition(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     picture = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+
+class Review(models.Model):
+    location = models.ForeignKey(
+        Location, on_delete=models.      CASCADE, related_name='reviews')
+    title = models.CharField(max_length=100)
+    content = models.TextField()
 
     def __str__(self):
         return self.title
