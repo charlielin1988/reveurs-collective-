@@ -16,4 +16,5 @@ def review_list(request):
     reviews = Review.objects.all()
     return render(request, 'reveurs/review_list.html', {'reviews': reviews})
 
+
 # Create your views here.
