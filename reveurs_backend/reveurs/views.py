@@ -1,20 +1,31 @@
-from django.shortcuts import render
+from rest_framework import generics
+from .serializers import LocationSerializer, ExhibitionSerializer, ReviewSerializer
 from .models import Location, Exhibition, Review
 
 
-def location_list(request):
-    locations = Location.objects.all()
-    return render(request, 'reveurs/location_list.html', {'locations': locations})
+class LocationList(generics.ListCreateAPIView):
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer
 
 
-def exhibition_list(request):
-    exhibitions = Exhibition.objects.all()
-    return render(request, 'reveurs/exhibition_list.html', {'exhibitions': exhibitions})
+class LocationDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer
 
 
-def review_list(request):
-    reviews = Review.objects.all()
-    return render(request, 'reveurs/review_list.html', {'reviews': reviews})
+class ExhibitionList(generics.ListCreateAPIView):
+    queryset = Exhibition.objects.all()
+    serializer_class = ExhibitionSerializer
+
+
+class ExhibitionDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Exhibition.objects.all()
+    serializer_class = ExhibitionSerializer
+
+
+class ReviewList(generics.ListCreateAPIView):
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
 
 
 # Create your views here.
