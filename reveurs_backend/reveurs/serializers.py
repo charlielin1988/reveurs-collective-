@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Location, Exhibition, Review
+from .models import Location, Exhibition
 
 
 class LocationSerializer(serializers.HyperlinkedModelSerializer):
@@ -8,30 +8,25 @@ class LocationSerializer(serializers.HyperlinkedModelSerializer):
         many=True,
         read_only=True
     )
+    location_url = serializers.ModelSerializer.serializer_url_field(
+        view_name='location_detail')
 
     class Meta:
         model = Location
-        fields = ('id', 'user', 'city', 'start_date', 'end_date',)
+        fields = ('id', 'location_url', 'city', 'start_date',
+                  'end_date', 'exhibitions')
 
 
 class ExhibitionSerializer(serializers.HyperlinkedModelSerializer):
     location = serializers.HyperlinkedRelatedField(
         view_name='location_detail',
-        read_only=True
-    )
+        read_only=True)
+
+    location_id = serializers.PrimaryKeyRelatedField(
+        queryset=Location.objects.all(),
+        source='location')
 
     class Meta:
         model = Exhibition
-        fields = ('id', 'location', 'title',
-                  'description', 'picture', 'location_id')
-
-
-class ReviewSerializer(serializers.HyperlinkedModelSerializer):
-    location = serializers.HyperlinkedRelatedField(
-        view_name='location_detail',
-        read_only=True
-    )
-
-    class Meta:
-        model = Review
-    fields = ('id', 'location', 'location_id', 'title', 'content')
+        fields = ('id', 'location', 'location_id',
+                  'title', 'picture', 'description', )
