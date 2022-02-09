@@ -21,3 +21,16 @@ class Exhibition(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Review(models.Model):
+    location = models.ForeignKey(
+        Location, on_delete=models.CASCADE,
+        related_name='reviews'
+    )
+    username = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.title

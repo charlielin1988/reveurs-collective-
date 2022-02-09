@@ -8,5 +8,8 @@ urlpatterns = [
          name='location_detail'),
     path('exhibitions/', views.ExhibitionList.as_view(), name='exhibition_list'),
     path('exhibitions/<int:pk>', views.ExhibitionDetail.as_view(),
-         name='exhibition_detail')
+         name='exhibition_detail'),
+    path('reviews/', views.ReviewList.as_view(), name='review_list'),
+    path('reviews/<int:pk>', views.ReviewDetail.as_view(),
+         name='review_detail')
 ]

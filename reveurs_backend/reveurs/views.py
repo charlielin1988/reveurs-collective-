@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .serializers import LocationSerializer, ExhibitionSerializer
-from .models import Location, Exhibition
+from .serializers import LocationSerializer, ExhibitionSerializer, ReviewSerializer
+from .models import Location, Exhibition, Review
 
 
 class LocationList(generics.ListCreateAPIView):
@@ -24,14 +24,14 @@ class ExhibitionDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ExhibitionSerializer
 
 
-# class ReviewList(generics.ListCreateAPIView):
-#     queryset = Review.objects.all()
-#     serializer_class = ReviewSerializer
+class ReviewList(generics.ListCreateAPIView):
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
 
 
-# class ReviewDetail(generics.ListCreateAPIView):
-#     queryset = Review.objects.all()
-#     serializer_class = ReviewSerializer
+class ReviewDetail(generics.ListCreateAPIView):
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
 
 
 # Create your views here.
