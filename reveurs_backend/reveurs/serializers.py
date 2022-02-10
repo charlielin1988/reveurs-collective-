@@ -14,7 +14,7 @@ class LocationSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Location
         fields = ('id', 'location_url', 'city', 'start_date',
-                  'end_date', 'exhibitions')
+                  'end_date', 'exhibitions', 'location_picture')
 
 
 class ExhibitionSerializer(serializers.HyperlinkedModelSerializer):

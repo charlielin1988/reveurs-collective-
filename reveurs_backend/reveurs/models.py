@@ -7,6 +7,7 @@ class Location(models.Model):
     city = models.CharField(max_length=100)
     start_date = models.DateField()
     end_date = models.DateField()
+    location_picture = models.TextField(default='null')
 
     def __str__(self):
         return self.city
