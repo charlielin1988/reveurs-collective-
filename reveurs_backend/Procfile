@@ -1,0 +1,1 @@
+web: gunicorn reveurs_backend.wsgi

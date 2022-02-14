@@ -21,7 +21,9 @@ An immersive site for fans of Erin Morgenstern's The Night Circus, wherein a sec
 
 ### Site Preview
 
----
+## <img src ="/Users/charliestrange/ga_seir/projects/reveurs-collective-/images/Home.png">
+
+## <img src= "/Users/charliestrange/ga_seir/projects/reveurs-collective-/images/Screen Shot 2022-02-14 at 12.35.18 PM.png">
 
 ### Getting Started
 
